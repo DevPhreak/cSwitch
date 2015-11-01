@@ -6,12 +6,12 @@ cocpath = '/data/data/com.supercell.clashofclans/shared_prefs/'
 backuppath = '/sdcard/cswitcher/'
 x = sys.argv[1]
 def updater():
-	currentversion = 0.1
+	currentversion = 0.2
 	newversion = urllib2.urlopen("https://raw.githubusercontent.com/DevPhreak/cSwitch/master/Update.txt").read()
 	if newversion > currentversion:
 		answer = str(raw_input("There is a new version available, would you like to update?\nYes \\ No: "))
 		if (answer == 'Yes' or answer =='Y' or answer == 'y' or answer == 'yes'):
-		 print 'updating'
+		 os.system("su -c 'rm -f cswitch.py | curl https://raw.githubusercontent.com/DevPhreak/cSwitch/master/cswitch.py > cswitch.py'")
 		else:
 			print 'Ignoring update.'
 	else:
