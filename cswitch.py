@@ -31,7 +31,7 @@ def firstrun():
 		print help
 	return
 def main():
-	if x == 'help':,
+	if x == 'help':
 		print help
 	elif os.path.isfile(backuppath+x) == True:
 		killapp( 'com.supercell.clashofclans' )
