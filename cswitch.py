@@ -15,8 +15,7 @@ def updater():
 		else:
 			print 'Ignoring update.'
 			firstrun()
-	elif:
-		if newversion == currentversion:
+	elif newversion == currentversion:
 			print 'You\'re up-to-date'
 	else:
 		print 'You\'re up-to-date'
